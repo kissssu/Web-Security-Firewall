@@ -9,7 +9,7 @@ This project provides a basic framework for implementing a web security firewall
 - ```main.sh```: Bash script for monitoring logs and implementing security measures **(IMPORTANT: Requires modification before use).**
 
 ## How it Works:
-
+ 
 1. The Flask application runs and logs user activity and application events.
 2. The main.sh script periodically checks the log file (logs.txt) for suspicious activity.
 3. The script can currently detect:
