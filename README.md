@@ -21,10 +21,10 @@ This project provides a basic framework for implementing a web security firewall
 
 *   This is a basic example and should be customized for your specific application and security needs.
 *   The provided script requires modification before deployment:
-    *   Replace placeholder IP addresses and thresholds with your desired values in `main.sh`.
-    *   Configure the script to match the specific format of your `logs.txt` file.
-    *   Thoroughly test the script in a *non-production* environment before deploying it on a live server.
-    *   **IPv6 Support:** The script now supports blocking both IPv4 and IPv6 addresses. Ensure your log file records IP addresses correctly.
+    *   Adjust `THRESHOLD`, `BLOCK_DURATION`, and other parameters as needed in `main.sh`.
+    *   **Crucially:** Ensure the IP address extraction logic in `main.sh` correctly parses your `logs.txt` file (especially for IPv6 addresses).  The script now handles more complex log lines and extracts both IPv4 and IPv6 addresses.
+    *   The `iptables` and `ip6tables` rules are initially commented out.  **Uncomment them only after rigorous testing in a non-production environment.**  Be extremely careful with `iptables` and `ip6tables` rules.  Test them on a non-critical system first.
+    *   The script now includes error handling for the log file (checks for existence and readability).
 *   Blocking IP addresses can disrupt legitimate traffic. Use this functionality with extreme caution.
 *   Security is an ongoing process. Regularly review and update your script to address new threats.  Consider using a more robust solution like `fail2ban` for production environments.
 
