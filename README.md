@@ -55,6 +55,14 @@ python app.py
 sudo ./main.sh
 ```
 
+## Upcoming Updates (Roadmap)
+
+*   **Integration with `fail2ban`:**  Exploring integration with `fail2ban` for more robust and feature-rich intrusion detection.
+*   **More Sophisticated Threat Detection:**  Investigating methods for detecting more complex attack patterns, such as unusual request patterns or suspicious user agents.
+*   **Configuration File Support:**  Moving key parameters (thresholds, block duration, etc.) to a configuration file for easier management.
+*   **Email/Slack Notifications:**  Adding support for sending notifications when suspicious activity is detected.
+*   **Improved Logging:**  Implementing log rotation and more detailed logging of blocked IPs and events.
+
 ## Disclaimer:
 
 This project is for educational purposes only. The authors are not responsible for any misuse or security vulnerabilities that may arise from using this script. Users are responsible for understanding the implications and customizing the script for their specific needs.
