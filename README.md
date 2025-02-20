@@ -63,6 +63,14 @@ sudo ./main.sh
 *   **Email/Slack Notifications:**  Adding support for sending notifications when suspicious activity is detected.
 *   **Improved Logging:**  Implementing log rotation and more detailed logging of blocked IPs and events.
 
+## Contributing
+
+Contributions are welcome!  Please feel free to submit pull requests or open issues to suggest improvements or report bugs.
+
+## Contact
+
+If you have any questions or feedback, please feel free to contact me at [iamkissu007@gmail.com](mailto:iamkissu007@gmail.com).
+
 ## Disclaimer:
 
 This project is for educational purposes only. The authors are not responsible for any misuse or security vulnerabilities that may arise from using this script. Users are responsible for understanding the implications and customizing the script for their specific needs.
