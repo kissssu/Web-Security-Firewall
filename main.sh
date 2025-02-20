@@ -27,6 +27,18 @@ check_log() {
     fi
   done
 
+  # Process IPv6 addresses
+  for ipv6 in $ipv6s; do
+    # ... (IPv6 logic, using ip6tables)
+    echo "Checking IPv6: $ipv6" # Debugging
+    count=$(grep -c "$ipv6" <<< "$errors")
+    if [ "$count" -gt "$THRESHOLD" ]; then
+         echo "WARNING: Frequent 404 errors from IPv6: $ipv6. Blocking for $BLOCK_DURATION seconds."
+        #   sudo ip6tables -A INPUT -s "$ipv6" -j DROP
+        #   (sleep "$BLOCK_DURATION"; sudo ip6tables -D INPUT -s "$ipv6" -j DROP) &
+    fi
+  done
+
   # Check for potential brute-force attacks
   local failed_logins=$(grep -E 'POST /login HTTP/1.1 401' <<< "$new_lines")
   while IFS=' ' read -r ip _; do
